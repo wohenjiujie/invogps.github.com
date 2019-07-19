@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MapViewActivity"
+    tools:showIn="@layout/app_bar_map_view">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.amap.api.maps.MapView
+            android:id="@+id/basic_map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </com.amap.api.maps.MapView>
+
+        <Button
+            android:id="@+id/indoor"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="360dp"
+            android:background="@drawable/indoor"
+            android:alpha="0.5"
+            android:onClick="inToOut"
+            android:visibility="gone"></Button>
+
+        <Button
+            android:id="@+id/outdoor"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="360dp"
+            android:onClick="outToIn"
+            android:background="@drawable/outdoor"
+            android:alpha="0.5"></Button>
+        
+        <Button
+            android:id="@+id/jump"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="680dp"
+            android:background="@drawable/sport"
+            android:onClick="jump"
+            android:alpha="0.2"/>
+
+        <Button
+            android:id="@+id/location"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="355dp"
+            android:onClick="location"
+            android:alpha="0.5"
+            android:background="@drawable/location"
+            />
+        <TextView
+            android:id="@+id/location_errInfo_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|left"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:background="@color/red"
+            android:textColor="@color/gray"
+            android:text="TextView"
+            android:visibility="gone"/>
+        <!--<fragment
+            android:id="@+id/map"
+            class="com.amap.api.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <ImageView
+            android:id="@+id/clean_keywords"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/indoor"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/main_keywords"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/clean_keywords"
+
+            android:clickable="true"
+            android:completionThreshold="1"
+            android:drawableLeft="@drawable/search"
+            android:dropDownVerticalOffset="1.0dip"
+            android:gravity="center_vertical"
+            android:hint="关键字搜索"
+            android:imeOptions="actionDone"
+            android:inputType="text|textAutoComplete"
+            android:maxLength="20"
+            android:paddingLeft="10dp"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textColorHint="@drawable/search"
+            android:textSize="16.0sp" />-->
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
